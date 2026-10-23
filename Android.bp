@@ -1,0 +1,27 @@
+// FleuxSU - KernelSU/BakaSU-based root manager, shipped as a prebuilt system app.
+//
+// Add to your device/product makefile:
+//     PRODUCT_PACKAGES += FleuxSU
+android_app_import {
+    name: "FleuxSU",
+    apk: "FleuxSU.apk",
+
+    // KernelSU identifies its manager by the APK signing certificate baked into the kernel
+    // (EXPECTED_SIZE_FLEUX / EXPECTED_HASH_FLEUX in kernel/manager/manager_sign.h). The
+    // published APK is already signed with that key, so it must not be re-signed with the
+    // platform key - the kernel would stop treating it as the manager.
+    presigned: true,
+
+    // Keep the published bytes untouched (no re-alignment, no re-compression).
+    preprocessed: true,
+
+    // Nothing in the app needs privileged permissions; keep it a normal system app
+    // (/system/app/FleuxSU). Flip this to true if you want it in priv-app.
+    privileged: false,
+
+    // Prebuilt binaries are not preopted at build time; ART compiles them on device.
+    dex_preopt: { enabled: false },
+
+    // libksud.so is bundled for arm64-v8a only.
+    compile_multilib: "64",
+}
