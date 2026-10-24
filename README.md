@@ -17,6 +17,19 @@ side lives in [`daliboss/FleuxSU`](https://gitlab.com/daliboss/FleuxSU) and the 
 | ABI | arm64-v8a (`libksud.so` is bundled) |
 | SHA-256 | see `FleuxSU.apk.sha256` |
 
+## Supported devices
+
+This prebuilt is **only** intended for the following devices:
+
+| Codename | Device |
+|----------|--------|
+|   | Redmi Note 11S (NFC) |
+|    | Redmi Note 11S (non-NFC) |
+| | POCO M4 Pro (NFC) |
+|  | POCO M4 Pro (non-NFC) |
+
+Do **not** use this on any other device. The kernel,  and app are all built specifically for these four variants.
+
 ## Usage
 
 1. Clone into your tree:
