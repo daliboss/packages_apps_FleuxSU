@@ -23,12 +23,12 @@ This prebuilt is **only** intended for the following devices:
 
 | Codename | Device |
 |----------|--------|
-|   | Redmi Note 11S (NFC) |
-|    | Redmi Note 11S (non-NFC) |
-| | POCO M4 Pro (NFC) |
-|  | POCO M4 Pro (non-NFC) |
+| `fleur`  | Redmi Note 11S (NFC) |
+| `miel`   | Redmi Note 11S (non-NFC) |
+| `fleur_p`| POCO M4 Pro (NFC) |
+| `miel_p` | POCO M4 Pro (non-NFC) |
 
-Do **not** use this on any other device. The kernel,  and app are all built specifically for these four variants.
+Do **not** use this on any other device. The kernel, `ksud` and app are all built specifically for these four variants.
 
 ## Usage
 
